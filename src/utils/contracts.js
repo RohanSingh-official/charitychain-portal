@@ -74,7 +74,7 @@ export const getCharityContract = (signerOrProvider) => {
 
 // Deploy a new instance of the Charity contract (for testing/development)
 export const deployCharityContract = async (signer) => {
-  const CharityFactory = new ethers.ContractFactory(CharityABI, /* BYTECODE HERE */, signer);
+  const CharityFactory = new ethers.ContractFactory(CharityABI, /* BYTECODE HERE */ "", signer);
   const charity = await CharityFactory.deploy();
   await charity.deployed();
   
